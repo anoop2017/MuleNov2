@@ -8,10 +8,11 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
     <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <spring:beans>
-        <spring:bean id="Bean" name="Bean" class="worldbank.org.EmployeeName"/>
+        <spring:bean id="getEmp" name="getEmp" class="maven6.GetEmployees"/>
     </spring:beans>
-    <flow name="maven4Flow">
+    <flow name="maven6Flow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/maven" doc:name="HTTP"/>
-        <set-payload value="#['asdasdasdasd']" doc:name="Set Payload"/>
+        <set-payload value="#['asdad']" doc:name="Set Payload"/>
+        <invoke object-ref="getEmp" method="getDetails" methodArguments="Anoop" doc:name="Invoke"/>
     </flow>
 </mule>
