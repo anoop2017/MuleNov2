@@ -60,19 +60,21 @@
 	<!-- Mule Dependencies -->
 	<dependencies>
 		<!-- Xml configuration -->
+		<!-- https://mvnrepository.com/artifact/org.mule/mule-core -->
 		<dependency>
-        	<groupId>com.mulesoft.muleesb</groupId>
-			<artifactId>mule-core-ee</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
+		    <groupId>org.mule</groupId>
+		    <artifactId>mule-core</artifactId>
+		    <version>3.9.0</version>
 		</dependency>
+
 		<!-- Xml configuration -->
+		<!-- https://mvnrepository.com/artifact/org.mule.modules/mule-module-spring-config -->
 		<dependency>
-			<groupId>com.mulesoft.muleesb.modules</groupId>
-			<artifactId>mule-module-spring-config-ee</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
+		    <groupId>org.mule.modules</groupId>
+		    <artifactId>mule-module-spring-config</artifactId>
+		    <version>3.9.0</version>
 		</dependency>
+
 		<!-- Mule Transports -->
 		<dependency>
 			<groupId>org.mule.transports</groupId>
@@ -86,18 +88,20 @@
 			<version>${mule.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mule.transports/mule-transport-jdbc -->
 		<dependency>
-        	<groupId>com.mulesoft.muleesb.transports</groupId>
-			<artifactId>mule-transport-jdbc-ee</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
+		    <groupId>org.mule.transports</groupId>
+		    <artifactId>mule-transport-jdbc</artifactId>
+		    <version>3.9.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mule.transports/mule-transport-jms -->
 		<dependency>
-        	<groupId>com.mulesoft.muleesb.transports</groupId>
-			<artifactId>mule-transport-jms-ee</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
+		    <groupId>org.mule.transports</groupId>
+		    <artifactId>mule-transport-jms</artifactId>
+		    <version>3.9.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-vm</artifactId>
@@ -136,6 +140,20 @@
             <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
+		<!-- https://mvnrepository.com/artifact/com.mulesoft.weave/mule-plugin-weave -->
+		<dependency>
+		    <groupId>com.mulesoft.weave</groupId>
+		    <artifactId>mule-plugin-weave</artifactId>
+		    <version>4.0.0-M5</version>
+		    <scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mule.edi/edi-parser -->
+		<dependency>
+		    <groupId>org.mule.edi</groupId>
+		    <artifactId>edi-parser</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+
     </dependencies>
 
 	<repositories>
@@ -163,5 +181,19 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+    
+        <distributionManagement>
+        <repository>
+            <id>mule-releases</id>
+            <name>Mule Release Repository</name>
+            <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>mule-snapshots</id>
+            <name>Mule Snapshot Repository</name>
+            <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
