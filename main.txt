@@ -1,3 +1,5 @@
+bug fix 2 remote
+
 bug fix 1 remote
 
 main file remote 1
